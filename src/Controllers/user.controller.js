@@ -1,5 +1,6 @@
 const dbModel = require("../Models/dbmodel.js");
 
+//function to get all users
 const getAllUsers = async (req, res) => {
     try {
         const users = await dbModel.find();
@@ -13,6 +14,7 @@ const getAllUsers = async (req, res) => {
     }
 }
 
+//function to get all user names
 const getAllUserNames = async (req, res) => {
     try {
         const allNames = await dbModel.distinct("name");
@@ -26,6 +28,7 @@ const getAllUserNames = async (req, res) => {
     }
 }
 
+//function to get user by id
 const getUserById = async (req, res) => {
     try {
         const { id } = req.params;
@@ -40,6 +43,7 @@ const getUserById = async (req, res) => {
     }
 }
 
+//function to create a new user
 const createUser = async (req, res) => {
     try {
         const { name, subscribedChannels } = req.body;
@@ -55,6 +59,7 @@ const createUser = async (req, res) => {
     }
 }
 
+//function to update a user
 const updateUser = async (req, res) => {
     try {
         const { id } = req.params;

@@ -60,7 +60,7 @@ const userController = require('../Controllers/user.controller.js');
  *               items:
  *                 $ref: '#/components/schemas/Subscriber'
  */
-router.get('/subscribers', userController.getAllUsers);
+router.get('/subscribers', userController.getAllUsers); // get all users
 
 /**
  * @swagger
@@ -78,7 +78,7 @@ router.get('/subscribers', userController.getAllUsers);
  *               items:
  *                 type: string
  */
-router.get('/subscribers/names', userController.getAllUserNames);
+router.get('/subscribers/names', userController.getAllUserNames); // get all user names
 
 /**
  * @swagger
@@ -103,7 +103,7 @@ router.get('/subscribers/names', userController.getAllUserNames);
  *       404:
  *         description: Subscriber not found
  */
-router.get('/subscribers/:id', userController.getUserById);
+router.get('/subscribers/:id', userController.getUserById); // get user by id
 
 /**
  * @swagger
@@ -139,7 +139,7 @@ router.get('/subscribers/:id', userController.getUserById);
  *       400:
  *         description: Invalid request data
  */
-router.post('/new-user', userController.createUser);
+router.post('/new-user', userController.createUser); // create new user
 
 /**
  * @swagger
@@ -183,7 +183,7 @@ router.post('/new-user', userController.createUser);
  *       500:
  *         description: Internal server error
  */
-router.post('/update-user/:id', userController.updateUser);
+router.post('/update-user/:id', userController.updateUser); // update user
 
 
 module.exports = router;
