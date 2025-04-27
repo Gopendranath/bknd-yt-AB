@@ -14,7 +14,7 @@ app.use("/api-docs", swaggerUI.serve, swaggerUI.setup(swaggerSpec));
 
 
 app.get("/", (req, res) => {
-    res.send("Hello World!");
+    res.send('<a href="https://bknd-yt-ab.onrender.com/api-docs">Click here to visit API documentation</a>');
 });
 
 app.use("/api", router);
